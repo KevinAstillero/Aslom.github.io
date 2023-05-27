@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  
+    <style>
+        /* Body styles */
+        body {
+            margin: 0; /* Remove the default margin */
+             padding: 0; /* Add padding if necessary */
+            background-image: url("library.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+             background-repeat: no-repeat;
+        }
+        /* Container styles */
+        .container {
+          max-width: 400px;
+          margin: 100px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.486);
+        
+          
+        }
+    
+        /* Form styles */
+        .login-form {
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+    
+        .login-form .form-group {
+          margin-bottom: 15px;
+        }
+    
+        .login-form label {
+          display: block;
+          font-weight: bold;
+        }
+    
+        /* Button styles */
+        .login-form button[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          background-color: #007bff;
+          color: #fff;
+          font-weight: bold;
+        }
+    
+        .login-form button[type="submit"]:hover {
+          background-color: #e62b13;
+        }
+
+        h2{
+
+            color: rgb(83, 10, 10);
+            font-size: 25px;
+            font-weight: bold;
+            display: flex;
+            right: 10px;
+        }
+      </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h2 >Library Management System</h2>
+        <form id="login-form" onsubmit="handleLogin(); return false;">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="form-group"> 
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-danger">Log in</button>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and your existing JavaScript file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="library.js"></script>
+
+    <script src="library.js"></script>
+<script>
+  // Add an event listener to the login form submit button
+  document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Call the handleLogin function to handle the login
+    handleLogin();
+  });
+</script>
+
+    
+</body>
+</html>
